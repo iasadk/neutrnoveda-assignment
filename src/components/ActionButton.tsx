@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { Theme } from "../constants";
+import type { Theme } from "../types";
 
 type ActionButtonProps = {
   theme: Theme;

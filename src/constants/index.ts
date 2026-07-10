@@ -36,35 +36,6 @@ export const MONTHS: readonly string[] = [
     "December",
 ];
 
-// export const THEMES: Record<ThemeName, Theme> = {
-//   light: {
-//     bg: "#E6E4D8",
-//     panel: "#F7F5EC",
-//     panelAlt: "#EFEBDD",
-//     text: "#241B26",
-//     subtext: "#5B5147",
-//     border: "#D8D3C0",
-//     mother: "#B85C6B",
-//     father: "#3E4E7A",
-//     gold: "#8E6A21",
-//     spine: "#6B7A5E",
-//     shadow: "0 1px 2px rgba(36,27,38,0.06), 0 8px 24px rgba(36,27,38,0.06)",
-//   },
-//   dark: {
-//     bg: "#161020",
-//     panel: "#20182B",
-//     panelAlt: "#271D33",
-//     text: "#EDE7DA",
-//     subtext: "#B6AC9C",
-//     border: "#3A2E42",
-//     mother: "#E08A97",
-//     father: "#8AA0DE",
-//     gold: "#D4AF6A",
-//     spine: "#8FA37E",
-//     shadow: "0 1px 2px rgba(0,0,0,0.3), 0 12px 32px rgba(0,0,0,0.35)",
-//   },
-// };
-
 export const THEMES: Record<ThemeName, Theme> = {
     light: {
         // Base
