@@ -1,4 +1,4 @@
-import type { Factor, ShortLabel, ThemeName } from "../types";
+import type { Factor, ShortLabel, Theme, ThemeName } from "../types";
 
 export const FACTORS: Factor[] = [
     { key: "genetic", roman: "I", name: "Genetic Inheritance", desc: "Physical build, health patterns, hereditary resilience.", min: 9.333, max: 10.777 },
@@ -35,20 +35,6 @@ export const MONTHS: readonly string[] = [
     "November",
     "December",
 ];
-
-export interface Theme {
-    bg: string;
-    panel: string;
-    panelAlt: string;
-    text: string;
-    subtext: string;
-    border: string;
-    mother: string;
-    father: string;
-    gold: string;
-    spine: string;
-    shadow: string;
-}
 
 // export const THEMES: Record<ThemeName, Theme> = {
 //   light: {

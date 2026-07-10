@@ -1,8 +1,8 @@
 import dayjs from "dayjs";
 import { FACTORS } from "../constants";
 import type { ComputedResults, ComputedRow } from "../types";
-const SEED_MULTIPLIER: number = 12.9898;
-const RANDOM_MULTIPLIER: number = 43758.5453;
+const SEED_MULTIPLIER: number = 12.9898; // can set any value
+const RANDOM_MULTIPLIER: number = 43758.5453; // can set any value
 
 const seededFraction = (n: number): number => {
     const x = Math.sin(n * SEED_MULTIPLIER) * RANDOM_MULTIPLIER;

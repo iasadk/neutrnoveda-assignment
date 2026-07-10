@@ -1,9 +1,9 @@
 import dayjs from "dayjs";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
-import { SHORT_LABEL, THEMES, type Theme } from "../constants";
+import { SHORT_LABEL, THEMES } from "../constants";
 import { computeResults, fmt, todayLocalStr } from "../lib/utils";
-import type { ChartRow, PieChartRow, SavedResult, ThemeName } from "../types";
+import type { ChartRow, PieChartRow, SavedResult, Theme, ThemeName } from "../types";
 
 export function useCalculator() {
   const [currentTheme, setCurrentTheme] = useState<ThemeName>("light");
@@ -38,7 +38,7 @@ export function useCalculator() {
         const response = window.localStorage.getItem("legacy:history");
 
         if (response) {
-            console.log(JSON.parse(response))
+          console.log(JSON.parse(response));
           setSavedResults(JSON.parse(response) as SavedResult[]);
         }
       } catch {
@@ -49,6 +49,7 @@ export function useCalculator() {
     loadHistory();
   }, []);
 
+  //  Validation for date
   const validation = useMemo(() => {
     if (!dateOfBirth) {
       return {
@@ -122,6 +123,7 @@ export function useCalculator() {
     );
   }, [calculation]);
 
+  //   To save data in local storage
   const persistHistory = useCallback(
     async (history: SavedResult[]) => {
       setSavedResults(history);
@@ -166,6 +168,7 @@ export function useCalculator() {
     showToast("Result saved.");
   }, [calculation, dateOfBirth, savedResults, persistHistory, showToast]);
 
+  //   Deelte save record
   const handleDelete = useCallback(
     async (id: string) => {
       const updatedHistory = savedResults.filter((item) => item.id !== id);
@@ -188,6 +191,7 @@ export function useCalculator() {
     [showToast],
   );
 
+  //   CSV maker
   const exportCSV = useCallback(() => {
     if (!calculation) return;
 
@@ -231,6 +235,7 @@ export function useCalculator() {
     showToast("CSV downloaded.");
   }, [calculation, dateOfBirth, showToast]);
 
+  //   PDF maker
   const exportPDF = useCallback(() => {
     if (!calculation) return;
 

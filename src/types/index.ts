@@ -23,6 +23,20 @@ export type ShortLabel = Record<FactorKey, string>;
 export type ThemeName = "light" | "dark";
 
 
+export interface Theme {
+    bg: string;
+    panel: string;
+    panelAlt: string;
+    text: string;
+    subtext: string;
+    border: string;
+    mother: string;
+    father: string;
+    gold: string;
+    spine: string;
+    shadow: string;
+}
+
 export interface ComputedRow {
   key: Factor["key"];
   roman: string;
