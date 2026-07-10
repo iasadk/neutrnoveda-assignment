@@ -2,7 +2,54 @@
 
 A modern React + Vite web application that calculates a personalized **Mother vs Father legacy distribution** using a deterministic pseudo-random algorithm based on the user's date of birth.
 
-The application visualizes the calculated factors using interactive charts, provides saved history management, and supports exporting results.
+...
+
+## 🚀 Project Setup
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (v18 or later recommended)
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/<your-username>/<repository-name>.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd <repository-name>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```
+http://localhost:5173
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
 
 ## 🌐 Live Demo
 
